@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World Frontend</title>
+  <style>
+    body {
+      background-color: #282c34; /* Dark bluish background */
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    #message {
+      background-color: #61dafb; /* Bright highlight color */
+      color: #282c34;
+      padding: 20px 40px;
+      border-radius: 10px;
+      font-size: 3rem;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="message">Loading...</h1>
+
+  <script>
+    fetch('http://localhost:5000/api')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('message').innerText = data.message;
+      })
+      .catch(err => {
+        document.getElementById('message').innerText = 'Error loading message';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
