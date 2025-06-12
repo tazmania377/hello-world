@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 10000;
 app.use(cors());
 
 app.get('/api', (req, res) => {
-  res.json({ message: "Hello from Node.js backend hi!" });
+  res.json({ message: "Hello from Node.js backend hi INCLUDING THE PIPELINE!" });
 });
 
 app.listen(PORT, '0.0.0.0', () => {
