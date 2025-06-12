@@ -30,7 +30,11 @@
   <h1 id="message">Loading...</h1>
 
   <script>
+<<<<<<< HEAD
+    fetch('http://54.158.232.95/api')
+=======
     fetch('https://hello-world-backend-latest.onrender.com/api')
+>>>>>>> bf89aa46f43939fcf12e8ef2d8efd1dff1e6b621
       .then(res => res.json())
       .then(data => {
         document.getElementById('message').innerText = data.message;
