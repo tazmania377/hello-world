@@ -30,7 +30,7 @@
   <h1 id="message">Loading...</h1>
 
   <script>
-    fetch('http://localhost:5000/api')
+    fetch('http://54.158.232.95/api')
       .then(res => res.json())
       .then(data => {
         document.getElementById('message').innerText = data.message;
