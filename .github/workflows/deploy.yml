@@ -22,7 +22,7 @@ jobs:
       - name: Build and push Docker image (backend)
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./backend
+          file: ./backend/Dockerfile
           push: true
           tags: tazeenzahra/hello-world-backend:latest
