@@ -22,10 +22,11 @@ jobs:
       - name: Build and push Docker image (backend)
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./backend
+          file: ./backend/Dockerfile
           push: true
           tags: tazeenzahra/hello-world-backend:latest
+<<<<<<< HEAD
 
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v0.1.7
@@ -39,3 +40,5 @@ jobs:
             docker rm myapp-container || true
             docker pull tazeenzahra/hello-world-backend:latest
             docker run -d -p 80:10000 --name myapp-container tazeenzahra/hello-world-backend:latest
+=======
+>>>>>>> bf89aa46f43939fcf12e8ef2d8efd1dff1e6b621
