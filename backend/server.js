@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 10000;
 app.use(cors());
 
 app.get('/api', (req, res) => {
-  res.json({ message: "hello from backend with updated password" });
+  res.json({ message: "hello from backend with updated text " });
 });
 
 app.listen(PORT, '0.0.0.0', () => {
