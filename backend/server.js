@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 10000;
 app.use(cors());
 
 app.get('/api', (req, res) => {
-  res.json({ message: "hello from backend tried with new instance" });
+  res.json({ message: "hello from backend today" });
 });
 
 app.listen(PORT, '0.0.0.0', () => {
